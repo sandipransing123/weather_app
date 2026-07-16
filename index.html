@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <!-- CSS -->
+     <link href="style.css" rel="stylesheet" type="text/css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Theme Button -->
+    <button id="theme-btn">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <!-- Weather Card -->
+    <div class="weather-card">
+
+        <h1>Weather App</h1>
+
+        <!-- Search -->
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="city"
+                placeholder="Enter city name">
+
+            <button id="search-btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+        </div>
+
+        <!-- Current Location -->
+        <button id="location-btn">
+            <i class="fa-solid fa-location-dot"></i>
+            Current Location
+        </button>
+
+        <!-- Loading -->
+        <div id="loader" class="hide">
+            <div class="spinner"></div>
+        </div>
+
+        <!-- Error -->
+        <p id="error" class="hide"></p>
+
+        <!-- Weather Information -->
+        <div class="weather-info hide">
+
+            <h2 id="city-name">Pune</h2>
+
+            <img
+                id="weather-icon"
+                src=""
+                alt="Weather Icon">
+
+            <h1 id="temperature">30°C</h1>
+
+            <h3 id="description">Clear Sky</h3>
+
+            <div class="details">
+
+                <div class="box">
+                    <i class="fa-solid fa-droplet"></i>
+                    <h4>Humidity</h4>
+                    <p id="humidity">80%</p>
+                </div>
+
+                <div class="box">
+                    <i class="fa-solid fa-wind"></i>
+                    <h4>Wind</h4>
+                    <p id="wind">5 km/h</p>
+                </div>
+
+                <div class="box">
+                    <i class="fa-solid fa-temperature-half"></i>
+                    <h4>Feels Like</h4>
+                    <p id="feels-like">31°C</p>
+                </div>
+
+                <div class="box">
+                    <i class="fa-solid fa-eye"></i>
+                    <h4>Visibility</h4>
+                    <p id="visibility">10 km</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Forecast -->
+        <div class="forecast">
+
+            <h2>5-Day Forecast</h2>
+
+            <div id="forecast-container">
+
+                <!-- JavaScript will create forecast cards here -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
