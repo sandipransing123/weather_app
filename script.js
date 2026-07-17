@@ -29,7 +29,7 @@ async function getWeather(city) {
     try {
 
         const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`);
+            `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`);
 
         if (!response.ok) {
             throw new Error("City not found");
@@ -46,7 +46,7 @@ async function getWeather(city) {
         visibility.innerText = (data.visibility / 1000).toFixed(1) + " km";
 
         weatherIcon.src =
-        `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+            `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
 
         weatherInfo.classList.remove("hide");
 
@@ -68,16 +68,16 @@ searchBtn.addEventListener("click", () => {
 
     const city = cityInput.value.trim();
 
-    if(city !== ""){
+    if (city !== "") {
         getWeather(city);
     }
 
 });
 
 // Press Enter
-cityInput.addEventListener("keypress", (e)=>{
+cityInput.addEventListener("keypress", (e) => {
 
-    if(e.key==="Enter"){
+    if (e.key === "Enter") {
 
         searchBtn.click();
 
@@ -125,11 +125,11 @@ themeBtn.addEventListener("click", () => {
 
     document.body.classList.toggle("dark");
 
-    if(document.body.classList.contains("dark")){
+    if (document.body.classList.contains("dark")) {
 
         themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
 
-    }else{
+    } else {
 
         themeBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
 
